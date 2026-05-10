@@ -1,0 +1,526 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: auto;
+}
+
+.main {
+    margin-top: 30px;
+}
+
+.main-container {
+    width: 75%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hover-text:hover {
+    color: #0066CC;
+}
+
+.content {
+    margin-top: 16px;
+    display: flex;
+}
+
+.content-left {
+    width: 50%;
+    padding-right: 16px;
+    border-right: 1px solid #E9E9E9;
+}
+
+.content-left__item {
+    display: flex;
+    text-decoration: none;
+    padding: 16px 0;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.content-left__img {
+    width: 40%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: transform linear 0.1s
+}
+
+.content-left__img:hover {
+    transform: translateY(-5px);
+}
+
+.content-left__title {
+    width: 60%;
+    padding-left: 16px;
+}
+
+.content-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+    line-height: 24px;
+}
+
+.content-text {
+    margin-top: 8px;
+    color: #444444;
+    font-size: 14px;
+    display: block;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    line-height: 20px;
+}
+
+.content-poster {
+    margin-top: 16px;
+}
+
+.poster-img {
+    width: 100%;
+}
+
+.content-right {
+    padding-left: 20px;
+    width: 50%;
+}
+
+.category-section {
+    padding-bottom: 20px;
+    border-bottom: 5px solid #E9E9E9;
+}
+
+.menu-name__list {
+    margin-top: 16px;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.menu-name__link {
+    text-decoration: none;
+    color: #888;
+    display: inline-block;
+    transition: transform 0.5s ease
+}
+
+.menu-name__link:hover {
+    transform: translateX(15px)
+}
+
+.content-form {
+    margin-top: 16px;
+    display: flex;
+}
+
+.content-right__item {
+    text-decoration: none;
+    width: 45%;
+    padding-right: 16px;
+    border-right: 1px solid #E9E9E9;
+}
+
+.content-right__img {
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: transform linear 0.1s;
+}
+
+.content-right__img:hover{
+    transform: translateY(-5px);
+}
+
+.content-right__name {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    color: black;
+}
+
+.content-right__name:hover {
+    color: #0066CC;
+}
+
+.content-right__text {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #444444;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+    text-overflow: ellipsis;
+}
+
+.item-right {
+    width: 55%;
+    padding-left: 16px;
+}
+
+.content-right__list {
+    text-decoration: none;
+}
+
+.right-list {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #E9E9E9;
+    display: flex;
+    gap: 30px;
+}
+
+.right-list img{
+    width: 30%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: transform linear 0.1s;
+}
+
+.right-list img:hover {
+    transform: translateY(-5px);
+}
+
+.content-right__nameshort {
+    width: 70%;
+    font-size: 14px;
+    font-weight: 540;
+    line-height: 20px;
+    color: black;
+}
+
+.separte-right {
+    margin-top: 16px;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.content-slide {
+    margin-top: 30px;
+    background-color: #F2F2F2;
+}
+
+.content-slide__list {
+    display: flex;
+}
+
+.content-slide__link {
+    text-decoration: none;
+    padding: 32px 18px;
+    width: 50%;
+    display: block;
+    overflow-wrap: break-word;
+}
+
+.content-slide__img {
+    width: 100%;
+}
+
+.content-slide__link p {
+    color: #015E53;
+    padding: 16px 0;
+}
+
+.content-slide__link h5 {
+    color: black;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* Thể thao */
+#sport {
+    margin-top: 32px;
+}
+
+.sport-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sport-title h3 {
+    font-size: 24px;
+    color: #444444;
+}
+
+.sport-event {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sport-event span {
+    font-size: 14px;
+    color: #444444;
+}
+
+.tournament {
+    color: #444444;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 15px;
+    border: none;
+}
+
+.tournament:hover {
+    color: #222222;
+}
+
+.menu-sport {
+    margin-top: 20px;
+    border-top: 1px solid #7F7F7F;
+}
+
+#menu-check, .menu-mobile-btn {
+    display: none;
+}
+
+.menu-sport__list {
+    padding-left: 0;
+    padding-top: 16px;
+    display: flex;
+    gap: 35px;
+}
+
+.menu-sport__item {
+    list-style: none;
+}
+
+.menu-sport__link {
+    display: block;
+    text-decoration: none;
+    color: #015E53;
+    font-size: 14px;
+}
+
+.content-sport {
+    padding: 20px 0;
+    border-bottom: 5px solid #E9E9E9;
+}
+
+.content-sport__body {
+    display: flex;
+}
+
+.content-sport__news {
+    width: 45%;
+    padding-right: 16px;
+    border-right: 1px solid #E9E9E9;
+}
+
+.sport-new {
+    text-decoration: none;
+}
+
+.sport-new__img {
+    width: 100%;
+}
+
+.sport-new__title {
+    margin-top: 16px;
+    color: black;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.sport-new__text {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #444444;
+}
+
+.content-sport__old {
+    padding-left: 16px;
+    width: 55%;
+}
+
+.sport-last {
+    display: flex;
+    gap: 32px;
+}
+
+.sport-new__small {
+    text-decoration: none;
+    width: 50%;
+}
+
+.sport-new__small span {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 22px;
+    color: black;
+    font-weight: 600;
+}
+
+.lable {
+    margin-top: 22px;
+}
+
+.sport-newspaper {
+    display: flex;
+    margin-top: 20px;
+}
+
+.focus-newspaper {
+    width: 70%;
+    padding-right: 30px;
+}
+
+.focus-newspaper__item {
+    text-decoration: none;
+    display: flex;;
+}
+
+.focus-newspaper__img {
+    width: 30%;
+}
+
+.focus-newspaper__title {
+    width: 70%;
+    padding-left: 20px;
+}
+
+.sideline-newspaper {
+    width: 30%;
+    padding-left: 16px;
+}
+
+.label-top {
+    margin-top: 20px;
+}
+
+.sideline-newspaper__label {
+    padding: 20px 0;
+    border-top: 1px solid #E9E9E9;
+}
+
+.sideline-newspaper__label img {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.sideline-newspaper__note {
+    font-size: 16px;
+    color: #444444;
+    font-weight: 500;
+}
+
+.sideline-newspaper__content {
+    margin-top: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #222222;
+}
+
+.sideline-newspaper__item {
+    text-decoration: none;
+    display: flex;
+    padding: 20px 0;
+    border-top: 1px solid #E9E9E9;
+}
+
+.sideline-newspaper__title {
+    width: 70%;
+    padding-right: 16px;
+    color: #444444;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.sideline-newspaper__link {
+    width: 30%;
+}
+
+.sideline-newspaper__link img {
+    width: 100%;
+}
+
+.sport-container {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.sport-col-3 {
+    text-decoration: none;
+    width: 33%;
+    padding: 16px 0;
+    border-top: 1px solid #E9E9E9;
+}
+
+.sport-container__name {
+    color: #444444;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+}
+
+.sport-container__img {
+    width: 100%;
+    margin-top: 16px;
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+.page-item {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #005a4e;
+    border-radius: 8px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.page-item.active {
+    background-color: #005a4e;
+    color: white;
+    border-color: #005a4e;
+}
+
+.page-item:hover:not(.active) {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: #f0f7f6; 
+    transform: translateY(-2px);  
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+}
+
+.page-item:active {
+    transform: scale(0.95); 
+}
+
+.animation-click {
+    display: block;
+    transition: transform linear 0.3s;
+}
+
+.animation-click:hover {
+    transform: translateX(10px);
+}
+
+    
