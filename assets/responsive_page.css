@@ -1,0 +1,144 @@
+/* --- RESPONSIVE PAGE --- */
+
+@media (max-width: 1023px) {
+    .main-container {
+        width: 95%;
+    }
+
+    .menu-sport {
+        position: relative;
+        padding: 10px 0;
+    }
+
+    .menu-mobile-btn {
+        display: block;
+        font-size: 24px;
+        color: #015E53;
+        cursor: pointer;
+        padding: 10px 0;
+    }
+
+    .menu-sport__list {
+        display: none; 
+        flex-direction: column;
+        gap: 0;
+        background-color: #f9f9f9;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        border: 1px solid #E9E9E9;
+        padding-top: 0;
+    }
+
+    .menu-sport__item {
+        width: 100%;
+        border-bottom: 1px solid #E9E9E9;
+    }
+
+    .menu-sport__link {
+        padding: 15px 20px;
+        width: 100%;
+    }
+
+    .menu-sport__link:hover {
+        background-color: #015E53;
+        color: white;
+    }
+
+    #menu-check:checked ~ .menu-sport__list {
+        display: flex;
+    }
+
+    .content-sport__body {
+        flex-direction: column; 
+    }
+
+    .content-sport__news, 
+    .content-sport__old {
+        width: 100%;
+        padding: 0;
+        border: none;
+    }
+
+    .content-sport__news {
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #E9E9E9;
+    }
+
+    .sport-newspaper {
+        flex-direction: column;
+    }
+
+    .focus-newspaper, 
+    .sideline-newspaper {
+        width: 100%;
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 740px) {
+    .main-container {
+        width: 95%;
+    }
+    
+    .sport-event {
+        display: none;
+    }
+
+    .sport-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .menu-sport__list {
+        gap: 15px;
+        justify-content: space-between;
+    }
+
+    .sport-last {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sport-new__small {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .focus-newspaper__item {
+        flex-direction: column;
+    }
+
+    .focus-newspaper__img, 
+    .focus-newspaper__title {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .focus-newspaper__img {
+        margin-bottom: 12px;
+    }
+
+    .sport-container {
+        flex-direction: column;
+    }
+
+    .sport-col-3 {
+        width: 100%;
+    }
+
+    .pagination {
+        gap: 8px;
+    }
+
+    .page-item {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
