@@ -54,3 +54,5 @@ if (btnSend && commentBox) {
         commentBox.value = '';
     };
 }
+
+
