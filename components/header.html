@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao diện Header Báo Điện Tử</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/components/header.css">
+</head>
+<body id="top">
+
+    <!-- BẮT ĐẦU HEADER -->
+    <header>
+        <!-- Top Header: Logo + Thông tin -->
+        <div class="header-top container">
+            <a href="#" class="logo" id="logo-link">
+                <span class="v">V</span>NEWS
+            </a>
+
+            <div class="header-info">
+                <span><i class="fas fa-map-marker-alt"></i> TP Hà Nội</span>
+                <span class="divider">|</span>
+                <span id="date-display">Chủ nhật, 10/05/2026</span>
+                <span class="divider">|</span>
+                <span id="time-display">14:30:25</span>
+                <span class="divider">|</span>
+                <i class="fas fa-sun weather-icon"></i>
+                <span class="temp">29°C</span>
+            </div>
+
+            <!-- Nút bật tắt menu trên mobile -->
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <!-- Thanh Menu Chính -->
+        <nav class="main-nav" id="main-nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="#" id="home-link"><i class="fas fa-home"></i> Trang chủ</a></li>
+                    <li>
+                        <a href="#">Thời sự <i class="fas fa-angle-down" style="font-size: 12px;"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Chính trị</a></li>
+                            <li><a href="#">Giao thông</a></li>
+                            <li><a href="#">Môi trường</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Thế giới</a></li>
+                    <li>
+                        <a href="#">Thể thao <i class="fas fa-angle-down" style="font-size: 12px;"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Bóng đá</a></li>
+                            <li><a href="#">Tennis</a></li>
+                            <li><a href="#">Esports</a></li>
+                            <li><a href="#">Ngoại hạng Anh</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Sức khỏe</a></li>
+                    <li>
+                        <a href="#">Công nghệ <i class="fas fa-angle-down" style="font-size: 12px;"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="#">Sản phẩm mới</a></li>
+                            <li><a href="#">Phần mềm</a></li>
+                            <li><a href="#">Trí tuệ nhân tạo (AI)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Thanh Tin Tức Chạy Ngang (Breaking News) -->
+        <div class="ticker-container">
+            <div class="container" style="display: flex; align-items: center; width: 100%;">
+                <div class="ticker-title">
+                    <i class="fas fa-bolt"></i> TIN MỚI
+                </div>
+                <div class="ticker-wrap">
+                    <div class="ticker-text">
+                        Đội tuyển Việt Nam thắng đậm trong trận ra quân vòng loại World Cup <span>|</span>
+                        Giá vàng tăng mạnh vượt đỉnh lịch sử trong phiên giao dịch sáng nay <span>|</span>
+                        Công nghệ AI bùng nổ mạnh mẽ, định hình lại cấu trúc phần mềm năm 2026 <span>|</span>
+                        Hà Nội triển khai hệ thống giao thông thông minh giảm thiểu ùn tắc
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- KẾT THÚC HEADER -->
+
+    <div style="padding: 50px; text-align: center; color: #888;">
+        <h2>Nội dung trang web...</h2>
+        <p>Cuộn xuống để test tính năng Sticky Header và click Logo để test Smooth Scroll</p>
+    </div>
+
+    <script src="../assets/js/components/header.js"></script>
+
+</body>
+</html>

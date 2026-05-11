@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNEWS - Trang chủ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/components/header.css">
+    <link rel="stylesheet" href="./assets/css/components/footer.css">
+    <link rel="stylesheet" href="./assets/css/components/main.css">
+    <link rel="stylesheet" href="./assets/css/danh-muc/responsive.css">
+</head>
+<body>
+    <header>
+        <div class="header-top container">
+            <a href="./index.html" class="logo" id="logo-link">
+                <span class="v">V</span>NEWS
+            </a>
+            <div class="header-info">
+                <span><i class="fas fa-map-marker-alt"></i> TP Hà Nội</span>
+                <span class="divider">|</span>
+                <span id="date-display">Chủ nhật, 10/05/2026</span>
+                <span class="divider">|</span>
+                <span id="time-display">14:30:25</span>
+                <span class="divider">|</span>
+                <i class="fas fa-sun weather-icon"></i>
+                <span class="temp">29°C</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+
+        <nav class="main-nav" id="main-nav">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="./index.html" id="home-link"><i class="fas fa-home"></i> Trang chủ</a></li>
+                    <li>
+                        <a href="danh-muc/thoi-su.html">Thời sự <i class="fas fa-angle-down" style="font-size: 12px;"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="danh-muc/thoisu-chinhtri.html">Chính trị</a></li>
+                            <li><a href="danh-muc/thoisu-giaothong.html">Giao thông</a></li>
+                            <li><a href="danh-muc/thoisu-moitruong.html">Môi trường</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="danh-muc/the-gioi.html">Thế giới</a></li>
+                    <li>
+                        <a href="danh-muc/the-thao.html">Thể thao <i class="fas fa-angle-down" style="font-size: 12px;"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="danh-muc/thethao-bongda.html">Bóng đá</a></li>
+                            <li><a href="danh-muc/thethao-tennis.html">Tennis</a></li>
+                            <li><a href="danh-muc/thethao-esport.html">eSport</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="danh-muc/suc-khoe.html">Sức khỏe</a></li>
+                    <li>
+                        <a href="danh-muc/cong-nghe.html">Công nghệ <i class="fas fa-angle-down" style="font-size: 12px;"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="danh-muc/congnghe-sp&cd.html">Sản phẩm & Cộng đồng</a></li>
+                            <li><a href="danh-muc/congnghe-anm.html">An ninh mạng</a></li>
+                            <li><a href="danh-muc/congnghe-ai.html">Trí tuệ nhân tạo (AI)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="ticker-container">
+            <div class="container" style="display: flex; align-items: center; width: 100%;">
+                <div class="ticker-title">
+                    <i class="fas fa-bolt"></i> TIN MỚI
+                </div>
+                <div class="ticker-wrap">
+                    <div class="ticker-text">
+                        Đội tuyển Việt Nam thắng đậm trong trận ra quân vòng loại World Cup <span>|</span>
+                        Giá vàng tăng mạnh vượt đỉnh lịch sử trong phiên giao dịch sáng nay <span>|</span>
+                        Công nghệ AI bùng nổ mạnh mẽ, định hình lại cấu trúc phần mềm năm 2026 <span>|</span>
+                        Hà Nội triển khai hệ thống giao thông thông minh giảm thiểu ùn tắc
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="main-container">
+            <div class="space"></div>
+            <div class="content">
+                <div class="content-left">                  
+                    <a href="./bai-viet/bai-doc-9.html" class="content-left__item">
+                            <img src="./assets/Image/ts1.webp" alt="" class="content-left__img">
+                            <div class="content-left__title">
+                                <span class="content-name hover-text animation-click">Cử tri TP.HCM mong sớm tháo gỡ, đẩy nhanh tiến độ mở rộng quốc lộ 13</span>
+                                <p class="content-text">Tiếp xúc với Tổ đại biểu Quốc hội số 3 - TP.HCM, cử tri đề nghị sớm tháo gỡ vướng mắc, đẩy nhanh tiến độ nâng cấp, mở rộng quốc lộ 13 từ cầu Bình Triệu đến cầu Vĩnh Bình.</p>
+                            </div>
+                    </a>
+                    <a href="./bai-viet/bai-doc-10.html" class="content-left__item">
+                        <img src="./assets/Image/ts2-3.webp" alt="" class="content-left__img">
+                        <div class="content-left__title">
+                            <span class="content-name hover-text animation-click">Cà Mau nhìn nhận những tích cực và bất cập sau một năm vận hành chính quyền 2 cấp</span>
+                            <p class="content-text">
+                                Sau một năm vận hành chính quyền địa phương 2 cấp, Cà Mau ghi nhận chuyển biến tích cực trong tinh gọn bộ máy, chuyển đổi số. Tuy nhiên, tỉnh cũng nhìn nhận những bất cập ở cấp xã như thiếu nhân lực, dữ liệu liên thông chưa đồng bộ.
+                            </p>
+                        </div>
+                    </a>
+    
+                    <a href="./bai-viet/bai-doc-12.html" class="content-left__item">
+                        <img src="./assets/Image/ts4-3.webp" alt="" class="content-left__img">
+                        <div class="content-left__title">
+                            <span class="content-name hover-text animation-click">Cao tốc Biên Hòa - Vũng Tàu phấn đấu thông xe toàn tuyến trong tháng 5</span>
+                            <p class="content-text">
+                                Dự án thành phần 1 cao tốc Biên Hòa - Vũng Tàu hiện đã đạt 90%. Chủ tịch UBND thành phố Đồng Nai yêu cầu đẩy nhanh tiến độ, đảm bảo hoàn thành và đủ điều kiện thông xe trước ngày 18.5.
+                        </div>
+                    </a>
+                  
+                    <a href="./bai-viet/bai-doc-17.html" class="content-left__item">
+                        <img src="./assets/Image/ts9-2.webp" alt="" class="content-left__img">
+                        <div class="content-left__title">
+                            <span class="content-name hover-text animation-click">Công an TP.HCM: Xử lý lấn chiếm vỉa hè phải nắm rõ hoàn cảnh từng người dân</span>
+                            <p class="content-text">
+                                Công an TP.HCM cho biết từng cán bộ xử lý lấn chiếm vỉa hè phải nắm rõ hoàn cảnh từng người dân, địa bàn để có giải pháp phù hợp.
+                            </p>
+                        </div>
+                    </a>
+                    <div class="content-poster">
+                        <img src="../assets/images/samsung.jpg" alt="" class="poster-img">
+                    </div>
+    
+                    <a href="./bai-viet/bai-doc-19.html" class="content-left__item">
+                        <img src="./assets/Image/tg2.webp" alt="" class="content-left__img">
+                        <div class="content-left__title">
+                            <span class="content-name hover-text animation-click">Tổng thống Iran tiết lộ cuộc gặp Lãnh tụ tối cao Khamenei</span>
+                            <p class="content-text">
+                                Tổng thống Iran Masoud Pezeshkian ngày 7.5 tiết lộ đã có cuộc gặp Lãnh tụ tối cao Mojtaba Khamenei, người chưa xuất hiện trước công chúng kể từ khi nhậm chức vào tháng 3.
+                            </p>
+                        </div>
+                    </a>
+    
+                    <a href="./bai-viet/bai-doc-26.html" class="content-left__item">
+                        <img src="./assets/Image/tg9-1.jpeg" alt="" class="content-left__img">
+                        <div class="content-left__title">
+                            <span class="content-name hover-text animation-click">Việt Nam đóng vai trò quan trọng trong ASEAN</span>
+                            <p class="content-text">
+                                Nhận lời mời của Tổng thống Philippines, Chủ tịch ASEAN 2026 Ferdinand Romualdez Marcos Jr., Thủ tướng Lê Minh Hưng dẫn đầu Đoàn đại biểu cấp cao VN tham dự Hội nghị Cấp cao ASEAN lần thứ 48 tại Cebu (Philippines) từ ngày 7 - 8.5.
+                            </p>
+                        </div>
+                    </a>
+
+                    <a href="./bai-viet/bai-doc-20.html" class="content-left__item">
+                        <img src="./assets/Image/tg3.webp" alt="" class="content-left__img">
+                        <div class="content-left__title">
+                            <span class="content-name hover-text animation-click">Nhật Bản phóng tên lửa trong tập trận ở Biển Đông, Trung Quốc phản ứng</span>
+                            <p class="content-text">
+                                Tên lửa Nhật Bản đánh chìm tàu chiến ở Biển Đông trong khuôn khổ cuộc tập trận có sự tham gia của lực lượng Mỹ và nhiều nước khác, theo AFP ngày 7.5.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="./bai-viet/bai-doc-24.html" class="content-left__item">
+                        <img src="./assets/Image/tg7-1.webp" alt="" class="content-left__img">
+                        <div class="content-left__title">
+                            <span class="content-name hover-text animation-click">Hương Việt giữa trời tuyết Ladakh</span>
+                            <p class="content-text">
+                                Giữa gió núi lạnh buốt của Ladakh - vùng đất được mệnh danh là "tiểu Tây Tạng" trên đất Ấn - một quán ăn Việt nhỏ bé và bát phở nghi ngút khói đã mang đến hơi ấm quê nhà cho những người đi xa.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="./bai-viet/bai-doc-44.html" class="content-left__item">
+                        <img src="./assets/Image/sk9.png" alt="" class="content-left__img">
+                        <div class="content-left__title">
+                            <span class="content-name hover-text animation-click">Ung thư thực quản</span>
+                            <p class="content-text">
+                                Ung thư thực quản diễn tiến âm thầm, không có triệu chứng điển hình nên thường được phát hiện ở giai đoạn muộn, ảnh hưởng hiệu quả điều trị và tiên lượng sống.Thực quản là một phần của ống tiêu hóa, cấu trúc hình ống, dài khoảng 25 cm, rộng khoảng 2,5 cm. Thực quản nằm giữa khí quản (đường thở) và cột sống, chia làm ba đoạn trên, giữa, dưới.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+    
+                <div class="content-right">
+                    <section class="category-section">
+                        <ul class="menu-name__list">
+                            <li class="menu-name__item">
+                                <a href="the-thao.html" class="menu-name__link hover-text">  
+                                    <h3>THỂ THAO</h3>                    
+                                </a>
+                            </li>
+                            <li class="menu-name__item">
+                                <a href="thethao-bongda.html" class="menu-name__link hover-text">    
+                                    Bóng đá                  
+                                </a>
+                            </li>
+                            <li class="menu-name__item">
+                                <a href="thethao-tennis.html" class="menu-name__link hover-text"> 
+                                    Tennis                     
+                                </a>
+                            </li>
+                            <li class="menu-name__item">
+                                <a href="thethao-esport.html" class="menu-name__link hover-text"> 
+                                    eSport                     
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <div class="content-form">
+                            <a href="./bai-viet/bai-doc-28.html" class="content-right__item">
+                                <img src="./assets/Image/tt2-2.webp" alt="" class="content-right__img">
+                                <div class="content-right__title">
+                                    <span class="content-right__name animation-click hover-text">HLV Pep Guardiola thốt lên điều cay đắng sau trận hòa tai hại của Man City</span>
+                                    <p class="content-right__text">
+                                        Trận hòa 3-3 trước Everton khiến cho Man City không còn nắm trong tay quyền tự quyết trong cuộc đua vô địch giải Ngoại hạng Anh với Arsenal.
+                                    </p>
+                                </div>
+                            </a>
+                            
+                            <div class="item-right">
+                                <a href="./bai-viet/bai-doc-27.html" class="content-right__list">
+                                    <div class="right-list">
+                                        <span class="content-right__nameshort hover-text animation-click">Chelsea thua đậm Nottingham Forest</span>               
+                                        <img src="./assets/Image/tt1-1.webp" alt="" class="">
+                                    </div>              
+                                </a> 
+                                
+                                <a href="./bai-viet/bai-doc-31.html" class="content-right__list">
+                                    <div class="right-list lable">
+                                        <span class="content-right__nameshort hover-text animation-click">Djokovic thua ngược ở Rome Masters</span>               
+                                        <img src="./assets/Image/tt5.webp" alt="" class="">
+                                    </div>
+                                </a>
+        
+                                <a href="./bai-viet/bai-doc-33.html" class="content-right__list">
+                                    <div class="right-list lable">
+                                        <span class="content-right__nameshort hover-text animation-click">Việt Nam về nhì Cup Thể thao điện tử Đông Nam Á ở GameVerse 2026</span>               
+                                        <img src="./assets/Image/tt7-2.webp" alt="" class="">
+                                    </div>
+                                </a>
+        
+                                <a href="./bai-viet/bai-doc-30.html" class="content-right__list">
+                                    <div class="right-list lable">
+                                        <span class="content-right__nameshort hover-text animation-click">Sinner vô địch 5 giải Masters 1000 liên tiếp</span>               
+                                        <img src="./assets/Image/tt4.webp" alt="" class="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+    
+                    <section class="category-section">
+                        <ul class="menu-name__list">
+                            <li class="menu-name__item">
+                                <a href="suc-khoe.html" class="menu-name__link hover-text">  
+                                    <h3>SỨC KHỎE</h3>                    
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="content-form">
+                            <a href="./bai-viet/bai-doc-36.html" class="content-right__item">
+                                <img src="./assets/Image/sk1.webp" alt="" class="content-right__img">
+                                <div class="content-right__title">
+                                    <span class="content-right__name animation-click hover-text">Nhiễm HIV sau những cuộc tình chớp nhoáng qua mạng</span>
+                                    <p class="content-right__text">
+                                        Đến phòng khám vì cơn sốt nhẹ và vài nốt hạch bẹn, chàng trai 19 tuổi sốc khi nhận kết quả dương tính với HIV sau những lần "tìm vui" qua mạng. Nam thanh niên được bạn trai cũ đưa đến khám khi thấy cơ thể mệt mỏi, 
+                                        sốt âm ỉ và nổi hạch vùng bẹn. Ban đầu, cả hai chỉ nghĩ đến một bệnh nhiễm trùng thông thường. Tuy nhiên, khi bác sĩ chỉ định làm các xét nghiệm tầm soát bệnh lây truyền qua đường tình dục, kết quả cho thấy bệnh nhân nhiễm HIV, đồng thời mắc viêm gan B.
+                                    </p>
+                                </div>
+                            </a>               
+                            
+                            <div class="item-right">
+                                <a href="./bai-viet/bai-doc-38.html" class="content-right__list">
+                                    <div class="right-list">
+                                        <span class="content-right__nameshort hover-text animation-click">Bữa sáng nên bắt đầu lúc nào sau khi ngủ dậy?</span>               
+                                        <img src="./assets/Image/sk3.webp" alt="" class="">
+                                    </div>
+                                </a> 
+                                
+                                <a href="./bai-viet/bai-doc-42.html" class="content-right__list">
+                                    <div class="right-list lable">
+                                        <span class="content-right__nameshort hover-text animation-click">Thai nhi dính đốt sống, thận hình móng ngựa</span>               
+                                        <img src="./assets/Image/sk7.webp" alt="" class="">
+                                    </div>
+                                </a>
+        
+                                <a href="./bai-viet/bai-doc-40.html" class="content-right__list">
+                                    <div class="right-list lable">
+                                        <span class="content-right__nameshort hover-text animation-click">Có nên gây mê khi nội soi dạ dày, đại tràng?</span>               
+                                        <img src="./assets/Image/sk5.webp" alt="" class="">
+                                    </div>
+                                </a>
+        
+                                <a href="./bai-viet/bai-doc-43.html" class="content-right__list">
+                                    <div class="right-list lable">
+                                        <span class="content-right__nameshort hover-text animation-click">5 phương pháp điều trị ung thư tụy</span>               
+                                        <img src="./assets/Image/sk8.webp" alt="" class="">
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+    
+                    <section class="category-section">
+                        <ul class="menu-name__list">
+                            <li class="menu-name__item">
+                                <a href="cong-nghe.html" class="menu-name__link hover-text">  
+                                    <h3>CÔNG NGHỆ</h3>                    
+                                </a>
+                            </li>
+                            <li class="menu-name__item">
+                                <a href="congnghe-sp&cd.html" class="menu-name__link hover-text">    
+                                    Cộng đồng                  
+                                </a>
+                            </li>
+                            <li class="menu-name__item">
+                                <a href="congnghe-anm.html" class="menu-name__link hover-text"> 
+                                    An ninh mạng                     
+                                </a>
+                            </li>
+                            <li class="menu-name__item">
+                                <a href="congnghe-ai.html" class="menu-name__link hover-text">  
+                                    Trí tuệ nhân tạo                   
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="content-form">
+                            <a href="./bai-viet/bai-doc-2.html" class="content-right__item">
+                                <img src="./assets/Image/anh-bai-doc-2.webp" alt="" class="content-right__img">
+                                <div class="content-right__title">
+                                    <span class="content-right__name animation-click">iPhone 17 trở thành điện thoại bán chạy nhất thế giới</span>
+                                    <p class="content-right__text">
+                                        Theo báo cáo mới nhất từ công ty nghiên cứu thị trường Counterpoint Research, iPhone 17 là chiếc điện thoại thông minh bán chạy nhất trên thế giới trong giai đoạn quý I/2026.
+                                    </p>
+                                </div>
+                            </a>
+                            
+                            <div class="item-right">
+                                <a href="./bai-viet/bai-doc-7.html" class="content-right__list">
+                                    <div class="right-list">
+                                        <span class="content-right__nameshort hover-text animation-click">Cisco: AI có thể góp thêm khoảng 130 tỷ USD cho GDP Việt Nam vào 2040</span>               
+                                        <img src="./assets/Image/anh-bai-doc-7.webp" alt="" class="">
+                                    </div>
+                                </a> 
+                                
+                                <a href="./bai-viet/bai-doc-6.html" class="content-right__list">
+                                    <div class="right-list lable">
+                                        <span class="content-right__nameshort hover-text animation-click">Điểm tuần: Nhiều trang web phim, game lậu dừng hoạt động</span>               
+                                        <img src="./assets/Image/anh-bai-doc-6.webp" alt="" class="">
+                                    </div>
+                                </a>
+        
+                                <a href="./bai-viet/bai-doc-4.html" class="content-right__list">
+                                    <div class="right-list lable">
+                                        <span class="content-right__nameshort hover-text animation-click">Cải tiến đáng giá trên iPhone 18 Pro Max</span>               
+                                        <img src="./assets/Image/anh-bai-doc-4.webp" alt="" class="">
+                                    </div>
+                                </a>
+        
+                                <a href="./bai-viet/bai-doc-3.html" class="content-right__list">
+                                    <div class="right-list lable">
+                                        <span class="content-right__nameshort hover-text animation-click">Nội dung lậu gây thiệt hại gì khiến các quốc gia phải quyết liệt ngăn chặn?</span>               
+                                        <img src="./assets/Image/anh-bai-doc-3.webp" alt="" class="">
+                                    </div>                
+                                </a>              
+                            </div>
+                        </div> 
+                        <div class="content-slide">
+                            <div class="content-slide__list">
+                                <a href="./bai-viet/bai-doc-16.html" class="content-slide__link">
+                                    <img src="./assets/Image/ts8-1.webp" alt="" class="content-slide__img">
+                                    <p>Thời sự</p>
+                                    <h5 class="hover-text">Sẽ có hầm chui tại điểm nghẽn giao thông nút giao Mả Vòng ở Nha Trang</h5>
+                                </a>
+        
+                                <a href="./bai-viet/bai-doc-35.html" class="content-slide__link">
+                                    <img src="./assets/Image/tt9-10.webp" alt="" class="content-slide__img">
+                                    <p>Thể thao</p>
+                                    <h5 class="hover-text">Các hotgirl cuốn hút ở Vietnam GameVerse 2026</h5>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="site-footer">
+        <section class="interested-news">
+            <div class="container">
+                <div class="slider-header">
+                    <h3>TIN TỨC ĐƯỢC QUAN TÂM</h3>
+                    <div class="slider-controls">
+                        <button id="slideLeft" class="slider-btn">&#10094;</button>
+                        <button id="slideRight" class="slider-btn">&#10095;</button>
+                    </div>
+                </div>
+                
+                <div class="horizontal-scroll" id="newsSlider">
+                    <div class="news-item">
+                        <a href="./bai-viet/bai-doc-13.html"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTsEGPGXo74hBJFQNseHJcZs7gIzpKEllYaB96ehnD-gI7KqQ" alt="news"></a>
+                        <p><a href="./bai-viet/bai-doc-13.html">Hà Nội cấm xe xăng: Vùng lõi có 13 vị trí phù hợp lắp trạm sạc</a></p>
+                    </div>
+                    <div class="news-item">
+                        <a href="./bai-viet/bai-doc-14.html"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSgfWJ-_NpQUYScsKJpJUM2BnX5FpfACR5DUrUHlMcsriKUlw" alt="news"></a>
+                        <p><a href="./bai-viet/bai-doc-14.html">Du lịch đêm ở TP.HCM: Du khách sẽ chơi gì sau 0 giờ?</a></p>
+                    </div>
+                    <div class="news-item">
+                        <a href="./bai-viet/bai-doc-20.html"><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQwxdvWh9S-CbCB89Udxkpi961O2Rue7SlW2wtAYB_BAsxYlw" alt="news"></a>
+                        <p><a href="./bai-viet/bai-doc-20.html">Nhật Bản phóng tên lửa trong tập trận ở Biển Đông, Trung Quốc phản ứng</a></p>
+                    </div>
+                    <div class="news-item">
+                        <a href="./bai-viet/bai-doc-37.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkQW5zhpX-5U9TezvVkaS5_qAioY68HQdtSRCeneo4TFcdoQ" alt="news"></a>
+                        <p><a href="./bai-viet/bai-doc-37.html">Thịt gà sống để được bao lâu trong tủ lạnh?</a></p>
+                    </div>
+                    <div class="news-item">
+                        <a href="./bai-viet/bai-doc-27.html"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSJHZ0VAgazzjq_BNL-jbyPPGy7cC3VmgThhDP_q0TZu58pbw" alt="news"></a>
+                        <p><a href="./bai-viet/bai-doc-27.html">Chelsea thua đậm Nottingham Forest</a></p>
+                    </div>
+                    <div class="news-item">
+                        <a href="./bai-viet/bai-doc-1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHvOIn2_MiQu8H_GJQEmRVMzqxQEIe0L6BX7YWHgcZN9_uxA" alt="news"></a>
+                        <p><a href="./bai-viet/bai-doc-1.html">Viettel khẳng định vị thế quốc phòng Việt Nam tại Triển lãm SAHA 2026</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <hr>
+        <div class="footer-info-section">
+            <div class="container footer-grid">
+                <div class="footer-col-1">
+                    <h2 class="footer-logo">VNNEWS</h2>
+                    <p><strong>Cơ quan của:</strong> Bộ Công nghệ & Truyền thông</p>
+                    <p><strong>Tổng biên tập:</strong> Lưu Văn Nam</p>
+                    <p>Giấy phép hoạt động báo điện tử số 123/GP-BVHTTDL</p>
+                    <br>
+                    <p>Địa chỉ: 235 Hoàng Quốc Việt, Bắc Từ Liêm, Hà Nội</p>
+                    <p>Điện thoại: 099-9999-9999. Hotline: 0888-888-888</p>
+                    <p>Email: info@vnnews.vn</p>
+                </div>
+
+                <div class="footer-col-2">
+                    <ul>
+                        <li><a href="#">RSS</a></li>
+                        <li><a href="#">Liên hệ tòa soạn</a></li>
+                        <li><a href="#">Liên hệ quảng cáo: 0999.99.99.99</a></li>
+                        <li><a href="#">Email: quangcao@vnnews.vn</a></li>
+                        <li><a href="#">Chính sách bảo mật dữ liệu cá nhân</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col-3">
+                    <p>Đọc báo VNNEWS trên mobile:</p>
+                    <div class="app-links">
+                        <button class="btn-app">App Store</button>
+                        <button class="btn-app">Google Play</button>
+                    </div>
+                    <p>Theo dõi VNNEWS trên:</p>
+                    <div class="social-links">
+                        <a href="#">Facebook</a> | <a href="#">Youtube</a> | <a href="#">Tiktok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            <div class="container">
+                <p>© 2005-2026 Bản quyền thuộc về Báo điện tử VNNEWS.</p>
+            </div>
+        </div>
+    </footer> 
+    <button id="backToTop">↑</button>
+    <script src="./assets/js/components/header.js"></script>
+    <script src="./assets/js/components/footer.js"></script>
+</body>
+</html>

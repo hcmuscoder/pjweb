@@ -1,0 +1,364 @@
+        :root {
+            --primary-color: #d32f2f;
+            --text-color: #333333;
+            --text-gray: #666666;
+            --bg-white: #ffffff;
+            --bg-light: #f9f9f9;
+            --border-color: #eaeaea;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            /* Thêm chiều cao để test hiệu ứng sticky và smooth scroll */
+            height: 2000px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ================= HEADER CHÍNH ================= */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* ----- Top Header (Logo + Info) ----- */
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            cursor: pointer;
+        }
+
+        .logo .v {
+            color: var(--primary-color);
+            font-size: 42px;
+            background: linear-gradient(45deg, #d32f2f, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Thông tin Header */
+        .header-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+            color: var(--text-gray);
+            font-weight: 400;
+        }
+
+        .header-info .divider {
+            color: #ccc;
+        }
+
+        .weather-icon {
+            color: #f39c12;
+            /* Màu vàng mặt trời */
+            font-size: 16px;
+        }
+
+        .temp {
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        /* Nút Hamburger cho Mobile */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        /* ----- Main Navigation ----- */
+        .main-nav {
+            background-color: var(--bg-white);
+        }
+
+        .main-nav ul.nav-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .main-nav ul.nav-list>li {
+            position: relative;
+        }
+
+        .main-nav ul.nav-list>li>a {
+            display: block;
+            padding: 16px 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 15px;
+            transition: var(--transition);
+        }
+
+        .main-nav ul.nav-list>li>a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--bg-white);
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 8px 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 100;
+            border-top: 2px solid var(--primary-color);
+        }
+
+        .main-nav ul.nav-list>li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown li {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .dropdown li:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown li a {
+            display: block;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .dropdown li a:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+            padding-left: 25px;
+            /* Hiệu ứng lùi chữ vào nhẹ khi hover */
+        }
+
+        /* ----- Breaking News Ticker ----- */
+        .ticker-container {
+            background-color: #fff4f4;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 8px 0;
+        }
+
+        .ticker-title {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 15px;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-right: 15px;
+            z-index: 10;
+            flex-shrink: 0;
+        }
+
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .ticker-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker-anim 35s linear infinite;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .ticker-text:hover {
+            animation-play-state: paused;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        .ticker-text span {
+            margin: 0 20px;
+            color: #ccc;
+        }
+
+        @keyframes ticker-anim {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* ================= RESPONSIVE (MOBILE) ================= */
+        @media (max-width: 992px) {
+            .header-info {
+                display: none;
+                /* Ẩn thông tin thời tiết trên mobile để gọn */
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .main-nav {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--bg-white);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                display: none;
+                /* Ẩn menu đi ban đầu */
+            }
+
+            .main-nav.active {
+                display: block;
+            }
+
+            .main-nav ul.nav-list {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .main-nav ul.nav-list>li {
+                width: 100%;
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .main-nav ul.nav-list>li>a {
+                padding: 15px 20px;
+            }
+
+            /* Dropdown trên mobile hiển thị dạng dọc luôn */
+            .dropdown {
+                position: static;
+                box-shadow: none;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                display: none;
+                /* Dùng JS hoặc CSS hover mảng để hiện */
+                border-top: none;
+                background-color: var(--bg-light);
+            }
+
+            .main-nav ul.nav-list>li:hover .dropdown {
+                display: block;
+            }
+
+            .ticker-container .container {
+                display: flex;
+            }
+        }
+
+        /* ================= HIỆU ỨNG THU GỌN HEADER KHI CUỘN ================= */
+        /* Thêm transition cho các thành phần để hiệu ứng mượt mà */
+        header,
+        .header-top,
+        .logo,
+        .logo .v,
+        .main-nav ul.nav-list>li>a,
+        .ticker-container {
+            transition: all 0.5s ease;
+        }
+
+        /* Đặt chiều cao tối đa cho ticker để làm hiệu ứng trượt lên */
+        .ticker-container {
+            max-height: 40px;
+            opacity: 1;
+            overflow: hidden;
+        }
+
+        /* CÁC THAY ĐỔI KHI HEADER CÓ CLASS .shrink */
+        header.shrink {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            /* Làm bóng đậm hơn chút khi cuộn */
+        }
+
+        /* Thu nhỏ khoảng cách phần logo */
+        header.shrink .header-top {
+            padding: 5px 0;
+        }
+
+        /* Thu nhỏ Logo */
+        header.shrink .logo {
+            font-size: 24px;
+        }
+
+        header.shrink .logo .v {
+            font-size: 28px;
+        }
+
+        /* Ẩn thông tin thời tiết, giờ giấc để tiết kiệm không gian */
+        header.shrink .header-info {
+            opacity: 0;
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+        }
+
+        /* Ẩn hẳn thanh tin chạy ngang Breaking News */
+        header.shrink .ticker-container {
+            max-height: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            opacity: 0;
+            border-bottom: none;
+        }
+
+        /* Làm mỏng thanh Menu chính lại */
+        header.shrink .main-nav ul.nav-list>li>a {
+            padding: 10px 20px;
+        }
