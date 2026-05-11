@@ -1,457 +1,201 @@
-/* Layout & Reset cơ bản */
-* { box-sizing: border-box; }
-body { font-family: Arial, sans-serif; line-height: 1.8; color: #333; margin: 0; background: #f9f9f9; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 15px; }
+/* =========================================
+   STYLE TRANG BÀI VIẾT CHI TIẾT
+   ========================================= */
+/* Layout chính */
+.main-wrapper { 
+    display: flex; 
+    gap: 30px; 
+    margin-top: 20px; 
+    margin-bottom: 50px;
+}
 
-/* Header tạm */
-.main-header { background: #d32f2f; color: white; padding: 10px 0; }
-.logo { margin: 0; }
+/* Cột nội dung bài viết (Bên trái) */
+.article-detail { 
+    flex: 2.5; 
+    background: white; 
+    padding: 30px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 
-/* Bài viết chi tiết */
-.main-wrapper { display: flex; gap: 30px; margin-top: 20px; }
-.article-detail { flex: 2.5; background: white; padding: 30px; border-radius: 4px; }
-.article-title { font-size: 28px; color: #111; margin: 10px 0; }
-.main-img { width: 100%; border-radius: 4px; margin: 15px 0; }
-.img-caption { text-align: center; font-style: italic; color: #666; font-size: 14px; }
+.article-title { 
+    font-size: 28px; 
+    color: #111; 
+    margin: 10px 0; 
+    line-height: 1.4;
+}
+
+.article-meta {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.sapo {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.article-body p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.main-img { 
+    width: 100%; 
+    border-radius: 4px; 
+    margin: 15px 0; 
+}
+
+.img-caption { 
+    text-align: center; 
+    font-style: italic; 
+    color: #666; 
+    font-size: 14px; 
+    background: #f9f9f9;
+    padding: 10px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.author {
+    text-align: right;
+    font-size: 16px;
+    margin-top: 30px;
+}
 
 /* Ô bình luận */
-.comment-section textarea { width: 100%; height: 150px; padding: 15px; margin: 15px 0; border: 1px solid #ddd; border-radius: 5px; font-family: inherit; resize: vertical; }
-.btn-send { background: #d32f2f; color: white; border: none; padding: 10px 25px; cursor: pointer; border-radius: 4px; }
+.comment-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #eee;
+}
 
-/* Sidebar & Hover */
-/* Sidebar & Hover */
+.comment-section h3 {
+    color: #d32f2f;
+}
+
+.comment-section textarea { 
+    width: 100%; 
+    height: 120px; 
+    padding: 15px; 
+    margin: 15px 0; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    font-family: inherit; 
+    resize: vertical; 
+}
+
+.btn-send { 
+    background: #d32f2f; 
+    color: white; 
+    border: none; 
+    padding: 10px 25px; 
+    cursor: pointer; 
+    border-radius: 4px; 
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-send:hover {
+    background: #b71c1c;
+}
+
+/* =========================================
+   CỘT SIDEBAR (TIN LIÊN QUAN & TÀI TRỢ - BÊN PHẢI)
+   ========================================= */
 .sidebar { 
     flex: 1;  
 }
 
-.sidebar-box { margin-bottom: 30px; }
-.sidebar-box h3 { border-bottom: 2px solid #d32f2f; padding-bottom: 5px; font-size: 16px; margin-top: 0; }
-
-.related-list { list-style: none; padding: 0; margin: 0; }
-.related-list li { margin-bottom: 12px; border-bottom: 1px dashed #eee; padding-bottom: 8px; }
-.related-list a { text-decoration: none; color: #333; font-weight: bold; transition: color 0.3s; }
-.related-list a:hover { color: #d32f2f; }
-
-/* HIỆU ỨNG TRƯỢT DÍNH (STICKY) CHO KHỐI QUẢNG CÁO */
-.sticky-box {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 20px; /* Khi cuộn trang, khối này sẽ dừng lại cách mép trên màn hình 20px */
-}
-/* =========================================
-   STYLE FOOTER (GIỐNG 100% TRANG CHÍNH)
-   ========================================= */
-.site-footer { background: #fff; margin-top: 50px; border-top: 2px solid #d32f2f; font-family: 'Arial', sans-serif; }
-
-/* 1. Tin tức được quan tâm */
-.interested-news h3 { color: #d32f2f; margin-top: 0; margin-bottom: 20px; font-size: 16px; }
-.news-item { min-width: 180px; text-align: center; }
-.news-item img { width: 100%; border-radius: 4px; }
-.news-item a { text-decoration: none; color: #333; font-size: 14px; transition: color 0.3s; }
-.news-item a:hover { color: #d32f2f; }
-/* Bố cục dàn hàng ngang cho Tiêu đề và Nút bấm */
-.slider-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+.sidebar-box { 
+    margin-bottom: 30px; 
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.interested-news h3 { margin: 0; color: #d32f2f; font-size: 16px; }
-
-/* Tạo hình nút bấm tròn màu xám giống ảnh */
-.slider-btn {
-    background-color: #f1f1f1;
-    border: none;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
-    color: #555;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    margin-left: 10px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Hiệu ứng khi di chuột vào nút */
-.slider-btn:hover {
-    background-color: #e0e0e0;
+.sidebar-box h3 { 
+    border-bottom: 2px solid #d32f2f; 
+    padding-bottom: 10px; 
+    font-size: 16px; 
+    margin-top: 0; 
     color: #d32f2f;
-}
-
-/* Nâng cấp thanh kéo ngang (Ẩn thanh cuộn mặc định cho đẹp) */
-.horizontal-scroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding-bottom: 10px;
-    scroll-behavior: smooth; /* Cuộn mượt mà khi bấm nút */
-    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
-}
-
-/* Ẩn thanh cuộn trên Chrome/Safari/Edge */
-.horizontal-scroll::-webkit-scrollbar {
-    display: none;
-}
-
-/* 2. Thông tin tòa soạn (3 cột giống ảnh) */
-.footer-info-section { padding: 40px 0; }
-.footer-grid { display: flex; justify-content: space-between; gap: 30px; font-size: 14px; color: #444; line-height: 1.8; }
-.footer-col-1 { flex: 2; }
-.footer-col-2 { flex: 1.5; }
-.footer-col-3 { flex: 1.5; }
-
-.footer-logo { color: #d32f2f; font-size: 24px; margin-top: 0; margin-bottom: 15px; }
-.footer-col-1 p { margin: 2px 0; }
-
-.footer-col-2 ul { list-style: none; padding: 0; margin: 0; }
-.footer-col-2 li { margin-bottom: 8px; }
-.footer-col-2 a { text-decoration: none; color: #444; transition: color 0.3s; }
-.footer-col-2 a:hover { color: #d32f2f; }
-
-/* Nút tải App giống ảnh */
-.app-links { display: flex; gap: 10px; margin-bottom: 20px; margin-top: 5px; }
-.btn-app { background: #333; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
-.btn-app:hover { background: #555; }
-
-.social-links a { text-decoration: none; color: #444; margin-right: 5px; }
-.social-links a:hover { color: #d32f2f; }
-
-/* 3. Bản quyền (Căn giữa giống ảnh) */
-.footer-copyright { border-top: 1px solid #eee; padding: 20px 0; text-align: center; color: #888; font-size: 14px; background: #fafafa; }
-.footer-copyright p { margin: 0; }
-
-/* Nút Lên đầu trang hình tròn màu đỏ */
-#backToTop {
-    position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px;
-    background: #d32f2f; color: white; border: none; border-radius: 50%;
-    cursor: pointer; display: none; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    font-size: 18px; font-weight: bold;
-}
-#backToTop:hover { background: #b71c1c; }
-
-.breadcrumb a{ min-width: 180px; text-align: center; }
-.breadcrumb a{ text-decoration: none; color: #333; font-size: 20px; transition: color 0.3s; }
-.breadcrumb a:hover { color: #d32f2f; }
-
-
-* { box-sizing: border-box; }
-body { font-family: Arial, sans-serif; line-height: 1.8; color: #333; margin: 0; background: #f9f9f9; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 15px; }
-
-/* Header tạm */
-.main-header { background: #d32f2f; color: white; padding: 10px 0; }
-.logo { margin: 0; }
-/* =========================================
-   STYLE TRANG CÔNG NGHỆ (DẠNG Ô/KHUNG - CARD)
-   ========================================= */
-.category-title {
-    color: #d32f2f;
-    border-left: 5px solid #d32f2f;
-    padding-left: 15px;
-    margin: 30px 0;
-    font-size: 24px;
     text-transform: uppercase;
 }
 
-/* Khung bọc ngoài dạng lưới (Grid) */
-.news-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Chia 3 cột đều nhau */
-    gap: 20px; /* Khoảng cách giữa các ô */
-    margin-bottom: 50px;
+.related-list { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
 }
 
-/* Định dạng cho từng ô bài báo */
-.news-card {
-    background: #fff;
-    border: 1px solid #eaeaea;
-    border-radius: 8px; /* Bo góc tròn */
-    overflow: hidden; /* Cắt phần ảnh thừa ra khỏi viền bo góc */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hiệu ứng mượt */
+.related-list li { 
+    margin-bottom: 12px; 
+    border-bottom: 1px dashed #eee; 
+    padding-bottom: 12px; 
+    line-height: 1.5;
 }
 
-/* Khi di chuột vào ô: Nhấc lên một chút và đổ bóng */
-.news-card:hover {
-    transform: translateY(-8px); 
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+.related-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
-.news-card a {
-    text-decoration: none;
-    color: inherit;
-    display: block; /* Giúp toàn bộ thẻ có thể click được */
+.related-list a { 
+    text-decoration: none; 
+    color: #333; 
+    font-weight: bold; 
+    transition: color 0.3s; 
 }
 
-.card-img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover; /* Đảm bảo ảnh không bị méo */
-}
-
-.card-content {
-    padding: 20px;
-}
-
-/* Nhãn phân loại bài viết (ví dụ: AI, Thiết bị...) */
-.card-tag {
-    display: inline-block;
-    background: #f1eaea;
-    color: #d32f2f;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-.card-title {
-    font-size: 18px;
-    margin: 0 0 10px 0;
-    color: #222;
-    line-height: 1.4;
-    transition: color 0.3s;
-}
-
-/* Tiêu đề đổi màu đỏ khi di chuột */
-.news-card:hover .card-title {
+.related-list a:hover { 
     color: #d32f2f; 
 }
 
-.card-summary {
-    font-size: 14px;
-    color: #666;
-    margin: 0;
-    line-height: 1.5;
+/* Khối trượt dính cho Quảng cáo */
+.sticky-box {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 80px; /* Cách mép trên 80px để không bị đè bởi Header */
 }
+
 /* =========================================
-   ĐỊNH DẠNG KHUNG BÀI BÁO TO (TIN NỔI BẬT)
+   RESPONSIVE (DÀNH CHO ĐIỆN THOẠI & TABLET)
    ========================================= */
-.featured-card {
-    grid-column: span 2; /* Lệnh "thần thánh" bắt khung này chiếm 2 cột */
-    grid-row: span 2;
-    display: flex;
-    flex-direction: column;
+@media (max-width: 992px) {
+    /* Đổi từ xếp ngang thành xếp dọc */
+    .main-wrapper {
+        flex-direction: column; 
+    }
+    
+    .sidebar {
+        width: 100%;
+    }
+    
+    /* Tắt tính năng cuộn dính trên điện thoại để không che nội dung */
+    .sticky-box {
+        position: static; 
+    }
 }
 
-/* Làm ảnh của khung to cao hơn để cân đối */
-.featured-card .card-img {
-    height: 380px; 
-    object-fit: cover;
+@media (max-width: 768px) {
+    /* Thu nhỏ chữ và lề để vừa màn hình điện thoại */
+    .article-detail {
+        padding: 15px; 
+    }
+    .article-title {
+        font-size: 24px;
+    }
+    .article-body p {
+        font-size: 16px;
+    }
 }
-
-/* Tiêu đề của khung to phải lớn hơn */
-.featured-card .card-title {
-    font-size: 26px; 
-    margin-bottom: 15px;
-}
-
-/* Đoạn mô tả của khung to cũng giãn ra cho dễ đọc */
-.featured-card .card-summary {
-    font-size: 16px;
-    line-height: 1.6;
-}
-/* Đẩy nội dung xuống dưới cùng hoặc căn chỉnh cho đẹp */
-.featured-card .card-content {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.site-footer { background: #fff; margin-top: 50px; border-top: 2px solid #d32f2f; font-family: 'Arial', sans-serif; }
-
-/* 1. Tin tức được quan tâm */
-.interested-news h3 { color: #d32f2f; margin-top: 0; margin-bottom: 20px; font-size: 16px; }
-.news-item { min-width: 180px; text-align: center; }
-.news-item img { width: 100%; border-radius: 4px; }
-.news-item a { text-decoration: none; color: #333; font-size: 14px; transition: color 0.3s; }
-.news-item a:hover { color: #d32f2f; }
-/* Bố cục dàn hàng ngang cho Tiêu đề và Nút bấm */
-.slider-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.interested-news h3 { margin: 0; color: #d32f2f; font-size: 16px; }
-
-/* Tạo hình nút bấm tròn màu xám giống ảnh */
-.slider-btn {
-    background-color: #f1f1f1;
-    border: none;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
-    color: #555;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    margin-left: 10px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Hiệu ứng khi di chuột vào nút */
-.slider-btn:hover {
-    background-color: #e0e0e0;
-    color: #d32f2f;
-}
-
-/* Nâng cấp thanh kéo ngang (Ẩn thanh cuộn mặc định cho đẹp) */
-.horizontal-scroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding-bottom: 10px;
-    scroll-behavior: smooth; /* Cuộn mượt mà khi bấm nút */
-    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
-}
-
-/* Ẩn thanh cuộn trên Chrome/Safari/Edge */
-.horizontal-scroll::-webkit-scrollbar {
-    display: none;
-}
-
-/* 2. Thông tin tòa soạn (3 cột giống ảnh) */
-.footer-info-section { padding: 40px 0; }
-.footer-grid { display: flex; justify-content: space-between; gap: 30px; font-size: 14px; color: #444; line-height: 1.8; }
-.footer-col-1 { flex: 2; }
-.footer-col-2 { flex: 1.5; }
-.footer-col-3 { flex: 1.5; }
-
-.footer-logo { color: #d32f2f; font-size: 24px; margin-top: 0; margin-bottom: 15px; }
-.footer-col-1 p { margin: 2px 0; }
-
-.footer-col-2 ul { list-style: none; padding: 0; margin: 0; }
-.footer-col-2 li { margin-bottom: 8px; }
-.footer-col-2 a { text-decoration: none; color: #444; transition: color 0.3s; }
-.footer-col-2 a:hover { color: #d32f2f; }
-
-/* Nút tải App giống ảnh */
-.app-links { display: flex; gap: 10px; margin-bottom: 20px; margin-top: 5px; }
-.btn-app { background: #333; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
-.btn-app:hover { background: #555; }
-
-.social-links a { text-decoration: none; color: #444; margin-right: 5px; }
-.social-links a:hover { color: #d32f2f; }
-
-/* 3. Bản quyền (Căn giữa giống ảnh) */
-.footer-copyright { border-top: 1px solid #eee; padding: 20px 0; text-align: center; color: #888; font-size: 14px; background: #fafafa; }
-.footer-copyright p { margin: 0; }
-
-/* Nút Lên đầu trang hình tròn màu đỏ */
-#backToTop {
-    position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px;
-    background: #d32f2f; color: white; border: none; border-radius: 50%;
-    cursor: pointer; display: none; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    font-size: 18px; font-weight: bold;
-}
-#backToTop:hover { background: #b71c1c; }
-
-.container { max-width: 1100px; margin: 0 auto; padding: 0 15px; }
-
-.breadcrumb a{ min-width: 180px; text-align: center; }
-.breadcrumb a{ text-decoration: none; color: #333; font-size: 20px; transition: color 0.3s; }
-.breadcrumb a:hover { color: #d32f2f; }
-
-
-
-.site-footer { background: #fff; margin-top: 50px; border-top: 2px solid #d32f2f; font-family: 'Arial', sans-serif; }
-
-/* 1. Tin tức được quan tâm */
-.interested-news h3 { color: #d32f2f; margin-top: 0; margin-bottom: 20px; font-size: 16px; }
-.news-item { min-width: 180px; text-align: center; }
-.news-item img { width: 100%; border-radius: 4px; }
-.news-item a { text-decoration: none; color: #333; font-size: 14px; transition: color 0.3s; }
-.news-item a:hover { color: #d32f2f; }
-/* Bố cục dàn hàng ngang cho Tiêu đề và Nút bấm */
-.slider-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.interested-news h3 { margin: 0; color: #d32f2f; font-size: 16px; }
-
-/* Tạo hình nút bấm tròn màu xám giống ảnh */
-.slider-btn {
-    background-color: #f1f1f1;
-    border: none;
-    border-radius: 50%;
-    width: 35px;
-    height: 35px;
-    font-size: 16px;
-    color: #555;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    margin-left: 10px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Hiệu ứng khi di chuột vào nút */
-.slider-btn:hover {
-    background-color: #e0e0e0;
-    color: #d32f2f;
-}
-
-/* Nâng cấp thanh kéo ngang (Ẩn thanh cuộn mặc định cho đẹp) */
-.horizontal-scroll {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding-bottom: 10px;
-    scroll-behavior: smooth; /* Cuộn mượt mà khi bấm nút */
-    scrollbar-width: none; /* Ẩn thanh cuộn trên Firefox */
-}
-
-/* Ẩn thanh cuộn trên Chrome/Safari/Edge */
-.horizontal-scroll::-webkit-scrollbar {
-    display: none;
-}
-
-/* 2. Thông tin tòa soạn (3 cột giống ảnh) */
-.footer-info-section { padding: 40px 0; }
-.footer-grid { display: flex; justify-content: space-between; gap: 30px; font-size: 14px; color: #444; line-height: 1.8; }
-.footer-col-1 { flex: 2; }
-.footer-col-2 { flex: 1.5; }
-.footer-col-3 { flex: 1.5; }
-
-.footer-logo { color: #d32f2f; font-size: 24px; margin-top: 0; margin-bottom: 15px; }
-.footer-col-1 p { margin: 2px 0; }
-
-.footer-col-2 ul { list-style: none; padding: 0; margin: 0; }
-.footer-col-2 li { margin-bottom: 8px; }
-.footer-col-2 a { text-decoration: none; color: #444; transition: color 0.3s; }
-.footer-col-2 a:hover { color: #d32f2f; }
-
-/* Nút tải App giống ảnh */
-.app-links { display: flex; gap: 10px; margin-bottom: 20px; margin-top: 5px; }
-.btn-app { background: #333; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer; font-weight: bold; }
-.btn-app:hover { background: #555; }
-
-.social-links a { text-decoration: none; color: #444; margin-right: 5px; }
-.social-links a:hover { color: #d32f2f; }
-
-/* 3. Bản quyền (Căn giữa giống ảnh) */
-.footer-copyright { border-top: 1px solid #eee; padding: 20px 0; text-align: center; color: #888; font-size: 14px; background: #fafafa; }
-.footer-copyright p { margin: 0; }
-
-/* Nút Lên đầu trang hình tròn màu đỏ */
-#backToTop {
-    position: fixed; bottom: 30px; right: 30px; width: 45px; height: 45px;
-    background: #d32f2f; color: white; border: none; border-radius: 50%;
-    cursor: pointer; display: none; box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    font-size: 18px; font-weight: bold;
-}
-#backToTop:hover { background: #b71c1c; }
-
-.container { max-width: 1100px; margin: 0 auto; padding: 0 15px; }
